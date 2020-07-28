@@ -142,7 +142,7 @@ template<class T>
 void DoublyLinkedList<T>::push_back(const T& val) {
     if (tail_ == nullptr) {
         tail_ = new Node<T>(val);
-        tail_ = head_;
+        head_ = tail_;
     } else {
         if (tail_ == head_) {
             tail_ = new Node<T>(val, head_, nullptr);
@@ -159,7 +159,7 @@ template<class T>
 void DoublyLinkedList<T>::push_back(const T&& val) {
     if (tail_ == nullptr) {
         tail_ = new Node<T>(val);
-        tail_ = head_;
+        head_ = tail_;
     } else {
         if (tail_ == head_) {
             tail_ = new Node<T>(val, head_, nullptr);
